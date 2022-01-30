@@ -14,10 +14,10 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv("/Users/alex/Documents/.env")
-my_secret = os.environ.get("BLOG_SECRET")
+BLOG_SECRET = os.environ.get("BLOG_SECRET")
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = my_secret
+app.config['SECRET_KEY'] = BLOG_SECRET
 ckeditor = CKEditor(app)
 Bootstrap(app)
 
